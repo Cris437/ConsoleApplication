@@ -43,7 +43,30 @@ class Rook{
             cout<<"Error: La torre no puede moverse en diagonal"<<endl;
         }
     }
-
+    string draw()
+    {
+        if(isBlack)
+        {
+            return "[##]";
+        }
+        else
+        {
+            return "[TT]";
+        }
+    }
+    void printState()
+    {
+        if(isBlack)
+        {
+            cout << "[##] Black at Row: " << row
+                 << ", Col: " << column << endl;
+        }
+        else
+        {
+            cout << "[TT] White at Row: " << row
+                 << ", Col: " << column << endl;
+        }
+    }
 }
 int main()
 {
