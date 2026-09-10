@@ -59,17 +59,40 @@ class Rook{
         if(isBlack)
         {
             cout << "[##] Black at Row: " << row
-                 << ", Col: " << column << endl;
+                 << ", Col: " << col << endl;
         }
         else
         {
             cout << "[TT] White at Row: " << row
-                 << ", Col: " << column << endl;
+                 << ", Col: " << col << endl;
         }
     }
 }
 int main()
 {
-    cout << "Hello World!\n";
+    Rook TorreBlanca(false,1,1);
+    Rook TorreNegra(true,8,8);
+
+    TorreBlanca.printState();
+    TorreNegra.printState();
+    int fila, columna;
+    cout<<"Ingrese la fila a la que desea mover la torre blanca (1-8): ";
+    cin>>fila;
+    cout<<"Ingrese la columna a la que desea mover la torre blanca (1-8): ";
+    cin>>columna;
+    TorreBlanca.move(fila,columna);
+    cout<<endl;
+    TorreBlanca.printState();
+    
+    cout<<endl;
+    cout<<"Ingrese la fila a la que desea mover la torre negra (1-8): ";
+    cin>>fila;
+    cout<<"Ingrese la columna a la que desea mover la torre negra (1-8): ";
+    cin>>columna;
+    TorreNegra.move(fila,columna);
+    cout<<endl;
+    TorreNegra.printState();
+    return 0;
+
 }
 
